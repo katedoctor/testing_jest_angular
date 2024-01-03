@@ -2,18 +2,69 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "outDir": "./out-tsc/spec",
-    "types": [
-      "jest"
-      // 1
-    ],
+    "target": "esnext",
+    "types": ["jest", "node"],
+    "allowJs": true,
+    "preserveSymlinks": true,
+    "skipLibCheck": true,
+    "noImplicitAny": false,
+    "strictNullChecks": false,
+    "strict": false,
+    "module":"esnext",
     "esModuleInterop": true,
-    // 2
-    "emitDecoratorMetadata": true
-    // 3
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "experimentalDecorators": true,
+    "strictPropertyInitialization": false,
+    "strictFunctionTypes": false,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noFallthroughCasesInSwitch": true,
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "lib": [
+      "es2017",
+      "dom"
+    ],
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "paths": {
+      "avid-ui-lib": [
+        "./node_modules/avid-ui-lib/avid-ui-lib"
+      ],
+      "core-js/es7/reflect": [
+        "./node_modules/core-js/proposals/reflect-metadata"
+      ],
+      "core-js/es6/*": [
+        "./node_modules/core-js/es/*"
+      ],
+      "@app/*": [
+        "src/app/*"
+      ],
+      "@services/*": [
+        "src/app/core/services/*"
+      ],
+      "@interfaces/*": [
+        "src/app/core/interfaces/*"
+      ],
+      "@constants/*": [
+        "src/app/core/constants/*"
+      ],
+      "@shared/*": [
+        "src/app/shared/*"
+      ],
+      "@environments/*": [
+        "src/environments/*"
+      ],
+      "@assets/*": [
+        "src/assets/*"
+      ]
+    }
   },
-  "include": [
-    "src/**/*.spec.ts",
-    "src/**/*.d.ts"
+  "files": [
+    "src/setup.jest.ts",
+    "src/polyfills.ts"
   ]
 }
