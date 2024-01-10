@@ -1,6 +1,16 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import {
+  AsyncTableComponent,
+  LoadingSpinnerComponent,
+  RatingComponent,
+  RatingDonutChartComponent,
+  SearchTableComponent,
+  SelectComponent,
+  ToastService
+} from 'avid-ui-lib';
+import { MockComponent } from 'ng-mocks';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
@@ -9,7 +19,13 @@ describe('AppComponent', () => {
         RouterTestingModule
       ],
       declarations: [
-        AppComponent
+        AppComponent,
+        MockComponent(RatingDonutChartComponent),
+        MockComponent(AsyncTableComponent),
+        MockComponent(RatingComponent),
+        MockComponent(LoadingSpinnerComponent),
+        MockComponent(SearchTableComponent),
+        MockComponent(SelectComponent)
       ],
     }).compileComponents();
   });

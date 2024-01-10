@@ -17,11 +17,11 @@
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
-    "target": "ES2022",
-    "module": "ES2022",
+    "target": "es2015",
+    "module": "commonJS",
     "useDefineForClassFields": false,
     "lib": [
-      "ES2022",
+      "es2015",
       "dom"
     ]
   },

@@ -7,24 +7,11 @@
     "allowJs": true,
     "preserveSymlinks": true,
     "skipLibCheck": true,
-    "noImplicitAny": false,
-    "strictNullChecks": false,
-    "strict": false,
-    "module":"esnext",
-    "esModuleInterop": true,
+    "module": "esnext",
     "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": true,
-    "experimentalDecorators": true,
-    "strictPropertyInitialization": false,
-    "strictFunctionTypes": false,
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noFallthroughCasesInSwitch": true,
-    "baseUrl": "./",
-    "outDir": "./dist/out-tsc",
+    "outDir": "./out-tsc/spec",
     "lib": [
-      "es2017",
+      "es2015",
       "dom"
     ],
     "typeRoots": [
@@ -64,7 +51,13 @@
     }
   },
   "files": [
-    "src/setup.jest.ts",
+    "setup.jest.ts",
     "src/polyfills.ts"
+  ],
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
   ]
 }
